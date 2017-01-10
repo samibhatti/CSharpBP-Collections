@@ -1,4 +1,4 @@
-using Acme.Common;
+﻿using Acme.Common;
 using static Acme.Common.LoggingService;
 using System;
 using System.Collections.Generic;
@@ -50,11 +50,17 @@ namespace Acme.Biz
 
             Console.WriteLine(colorOptions);
 
-            var states = new Dictionary<string, string>();
-            states.Add("CA", "California");
-            states.Add("WA", "Washington");
-            states.Add("NY", "New York");
-         //   states.Add("CA", "Carolina");
+            /*var states = new Dictionary<string, string>();
+              states.Add("CA", "California");
+              states.Add("WA", "Washington");
+              states.Add("NY", "New York");*/
+            //   states.Add("CA", "Carolina");
+            var states = new Dictionary<string, string>()
+            {
+                { "CA", "California"},
+                { "WA", "Washington"},
+                { "NY", "New York"}
+            };
             Console.WriteLine(states);
         }
         public Product(int productId,
